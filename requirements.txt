@@ -1,0 +1,13 @@
+h5py
+opencv-python
+scikit-image
+fvcore
+spicy
+matplotlib
+efficientnet_pytorch
+batchgenerators
+medpy
+tensorboardX
+scikit-learn
+einops
+pyyaml>=5.4.0
