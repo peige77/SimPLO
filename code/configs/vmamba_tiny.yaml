@@ -1,0 +1,25 @@
+MODEL:
+  TYPE: vssm
+  NAME: vssm_tiny
+  DROP_PATH_RATE: 0.2
+  PRETRAIN_CKPT: "../code/pretrained_ckpt/vmamba_tiny_e292.pth"
+  VSSM:
+    EMBED_DIM: 96
+    DEPTHS: [2,4,12,2]
+
+trainer:  # 确保这部分存在
+  max_loss:
+    TTA: False
+    drop_percent: 80
+    apply_aug: cutmix
+  contrastive:
+    negative_high_entropy: True
+    low_rank: 3
+    high_rank: 20
+    current_class_threshold: 0.3
+    current_class_negative_threshold: 1
+    unsupervised_entropy_ignore: 80
+    low_entropy_threshold: 20
+    num_negatives: 50   #负样本数量
+    num_queries: 256  #查询数量
+    temperature: 0.5  #温度
