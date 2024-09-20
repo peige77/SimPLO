@@ -1,1 +1,6 @@
-# SimPLO
+# SimPLO：Pseudo-Labels Optimization for Semi-supervised Medical Image Segmentation
+
+## Abstract
+
+Generating pseudo-labels for the pixels of unlabeled images is essential in semi-supervised medical image segmentation.A common approach is to use high-confidence predictions as pseudo-labels; however, this can result in many pixels being unused due to uncertainty. To address this issue, we propose SimPLO, a pseudo-label optimization framework for semi-supervised medical image segmentation tasks. SimPLO, based on the teacher-student paradigm, employs a multi-objective loss strategy to fully utilize unlabeled data. It separates reliable and unreliable pixels using prediction entropy and adaptively adjusts the threshold between reliable and unreliable partitions as predictions become more accurate. Additionally, we introduce LMamba-UNet, an innovative network architecture designed to handle complex structures and long-range dependencies in medical images. Integrating the SimPLO method, LMamba-UNet achieves superior segmentation performance in a semi-supervised learning setting. We conducted extensive experiments on several public medical image datasets, including ACDC, PROMISE12, and LA MRI. The results showed that SimPLO significantly outperformed traditional supervised learning methods in segmentation accuracy and model robustness. Furthermore, it exhibits strong generalization capabilities across various medical image segmentation tasks, highlighting its potential and value in practical clinical applications. 
+
